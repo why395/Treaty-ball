@@ -58,7 +58,7 @@ function loginByWeixin(userInfo) {
           wx.setStorageSync('userInfo', res.data.userInfo);
           wx.setStorageSync('token', res.data.token);
           wx.setStorageSync('userId', res.data.userId);
-          resolve(res);
+           resolve(res);
         } else {
           reject(res);
         }

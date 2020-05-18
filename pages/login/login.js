@@ -69,19 +69,20 @@ Page({
                 isHide: false
             });
 
-            user.checkLogin().catch(() => {
+            // user.checkLogin().catch(() => {
 
                 user.loginByWeixin(e.detail.userInfo).then(res => {
                     app.globalData.hasLogin = true;
-                    wx.switchTab({
+                     wx.switchTab({
                         url: '../index/index',
                     })
+
                 }).catch((err) => {
                     app.globalData.hasLogin = false;
                     util.showErrorToast('微信登录失败');
                 });
 
-            });
+            // });
 
         } else {
             //用户按了拒绝按钮
