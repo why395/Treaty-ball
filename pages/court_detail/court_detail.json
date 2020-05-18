@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "球馆详情",
+  "usingComponents": {
+    "wux-cell-group": "../../lib/cell-group/index",
+    "wux-cell": "../../lib/cell/index",
+    "wux-button": "../../lib/button/index",
+    "wux-popup": "../../lib/popup/index"
+}
+}

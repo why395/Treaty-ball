@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/forum/forum",
+    "pages/court_list/court_list", 
+    "pages/court_detail/court_detail",
+    "pages/rent/rent",
+    "pages/collect/collect",
+    "pages/order/order",
+    "pages/search/search",
+    "pages/user/user",
+    "pages/pay/pay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0099FF",
+    "navigationBarTitleText": "约球吧",
+    "navigationBarTextStyle": "white"
+  },
+  
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#000",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/home1.png",
+        "selectedIconPath": "icons/home.png"
+      },
+      {
+        "pagePath": "pages/rent/rent",
+        "text": "订单",
+        "iconPath": "icons/order1.png",
+        "selectedIconPath": "icons/order.png"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "text": "论坛",
+        "iconPath": "icons/forum1.png",
+        "selectedIconPath": "icons/forum.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人",
+        "iconPath": "icons/user1.png",
+        "selectedIconPath": "icons/user.png"
+      }
+
+    ]
+  },
+  
+    
+
+  "sitemapLocation": "sitemap.json"
+}

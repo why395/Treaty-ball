@@ -1,0 +1,37 @@
+/* pages/category/category.wxss */
+.xxx{
+  background-color: #fff;
+  padding-bottom: 80rpx;
+}
+.le{
+  padding-left: 30rpx;
+}
+.lr{
+  padding-left: 80rpx;
+  padding-top: 30rpx;
+}
+.bottom{
+  border-bottom: 0.1rpx solid #ccc;
+}
+.bgcolor{
+  background-color: #fff;
+}
+.remarks{
+  width:100%;
+  background:#fff; 
+  border-bottom: 2rpx solid #ccc;
+}
+.remarks .header{
+  font-size: 32rpx;
+  font-weight: 600;
+  display: flex;
+  padding: 20rpx 30rpx;
+  position: relative;
+  justify-content: space-between;
+  color:orangered;
+  border-bottom: 2rpx solid #ccc;
+}
+.border{
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+}

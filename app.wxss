@@ -1,0 +1,16 @@
+@import "./styles/iconfont.wxss";
+@import "colorui/icon.wxss";
+@import "colorui/main.wxss";
+
+page,view,text,swiper-item,image,navigator{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 主题颜色 */
+page{
+  --themeColor: #0099FF;
+  /*定义字体大小*/
+  font-size: 28rpx;
+}

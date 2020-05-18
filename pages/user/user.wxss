@@ -1,0 +1,45 @@
+/* pages/user/user.wxss */
+page {
+  background: #F5F5F5;
+}
+.center{
+  text-align:center
+}
+.user_app_wrap{
+  margin-top: 30rpx;
+}
+.user_app_wrap .user_app {
+  width: 100%;
+}
+
+.user_app_wrap .user_app .user_collect {
+  padding: 22rpx 94rpx;
+  border-bottom: 1rpx solid #ccc;
+  border-top: 1rpx solid #ccc;
+  background: #fff;
+}
+.user_app_wrap .user_app .user_collect .text {
+  color: #666;
+}
+.user_app_wrap .user_app .user_remark {
+  padding: 22rpx 94rpx;
+  border-top: none;
+  border-bottom: 1rpx solid #ccc;
+  background: #fff;
+}
+.user_app_wrap .user_app .user_remark .text {
+  color: #666;
+}
+.app_info_wrap {
+  margin-top: 60rpx;
+  background-color: #fff;
+}
+.app_info_wrap .app_info_item {
+  padding: 15rpx 80rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.app_info_wrap .app_info_contact {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1rpx solid #ccc;
+}

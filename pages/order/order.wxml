@@ -1,0 +1,24 @@
+<!--pages/order/order.wxml-->
+<text>pages/order/order.wxml</text>
+
+<i-cell-group i-class="test">
+    <i-cell title="只显示箭头" is-link></i-cell>
+    <i-cell title="跳转到首页" is-link url="/pages/dashboard/index"></i-cell>
+    <i-cell title="只有 footer 点击有效" is-link url="/pages/dashboard/index" only-tap-footer></i-cell>
+  
+</i-cell-group>
+<view style="margin-top: 100px;">
+    <i-button bind:click="handleOpen1">普通对话框</i-button>
+    
+</view>
+<i-modal title="标题" visible="{{ visible1 }}" bind:ok="handleClose1" bind:cancel="handleClose1">
+    <view>一些文本</view>
+    <view>一些文本</view>
+    <view>一些文本</view>
+    <view>一些文本</view>
+    <view>一些文本</view>
+    <view>一些文本</view>
+    <view>一些文本</view>
+    <view>一些文本</view>
+    <view>一些文本</view>
+</i-modal>

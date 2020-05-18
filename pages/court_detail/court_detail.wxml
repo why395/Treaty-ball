@@ -1,0 +1,141 @@
+
+<view class="container">
+
+  <view class="pic-gallery">
+    <image src="{{coverPic}}" mode="hetightFix"></image>
+  </view>
+
+ 
+  <view class="court_name_row">
+    <view class="left">
+      <view class="court_name">球馆：{{name}}</view>
+      <view class="court_address">地址：{{address}}</view>
+      <view class="court_price">￥30元起</view>
+    </view>
+    <view class="right">
+      <view class="court_score">
+      <text>4.6分</text>
+     </view>
+    </view>    
+  </view>
+
+
+
+  <view class="remarks">
+    <view class="header">查看{{remarkslength}}条评论</view>
+    <!-- <view class="remarks_info">
+    </view> -->
+    <!-- <view class="item" wx:for="{{rentItmes}}" wx:for-item="rentItme" wx:key="unique">
+      <text class="title">{{rentItme.title}}</text>
+      <text class="special">{{rentItme.special}}</text>
+      <text class="notice">{{rentItme.notice}}</text>
+      <text class="price">{{rentItme.price}}</text>
+      <button class="order-btn">预约</button>
+    </view> -->
+    <view class="cu-list menu-avatar comment solids-top">
+      <view class="cu-item  border">
+        <view class="cu-avatar round" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
+        <view class="content">
+          <view class="text-grey">HY</view>
+          <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
+            <view class="flex">
+              <view class="flex-sub">这个体育馆挺不错的，面积大，距离近，环境很好，干净，设备完好，值得推荐</view>
+            </view>
+          </view>
+          <view class="margin-top-sm flex justify-between">
+            <view class="text-gray text-df">2020年3月12日</view>
+          </view>
+        </view>
+      </view>
+      <view class="cu-item  border">
+        <view class="cu-avatar round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+        <view class="content">
+          <view class="text-grey">林哈哈</view>
+          <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
+            <view class="flex">
+              <view class="flex-sub">非常不错，下次再来</view>
+            </view>
+          </view>
+          <view class="margin-top-sm flex justify-between">
+            <view class="text-gray text-df">2020年5月4日</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+  <view class="btm_tool">
+    <view class="tool_item">
+      <text class="cuIcon-dianhua lg text-gray"></text>
+      <view>联系客服</view>
+      <button open-type="contact"></button>
+    </view>
+    <view class="tool_item">
+      <text class="cuIcon-likefill lg text-gray"></text>
+      <view>收藏</view>
+    </view>
+    <view class="tool_item">
+      <text class="cuIcon-comment lg text-gray"></text>
+      <view>评论</view>
+    </view>
+    <view class="tool_item">
+      <text class="cuIcon-locationfill lg text-gray"></text>
+      <view>定位</view>
+    </view>
+    <button bindtap="showModal" class="tool_item btn_order shadow"  data-target="DialogModal1"> 
+        立即订场 
+    </button> 
+    
+  </view>
+
+  <view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+    <view class="cu-dialog">
+      <view class="cu-bar bg-white justify-end">
+        <view class="content o_title">{{name}}</view>
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close text-red"></text>
+        </view>
+      </view>
+      <view class="padding-xl">
+        <view class="cu-form-group border">
+          <view class="title">预约日期</view>
+          <picker mode="date" value="{{date}}" start="2020-01-01" end="2025-01-01" bindchange="DateChange">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+
+        <view class="cu-form-group ">
+          <view class="title">预约时间</view>
+          <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="TimeChange">
+            <view class="picker">
+              {{time}}
+            </view>
+          </picker>
+        </view>
+
+        <view class="cu-form-group ">
+		      <view class="title">预约时长</view>
+	      	<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+		      	<view class="picker">
+			  	    {{index?picker[index]:'请选择时长（不超过3h）'}}
+			        </view>
+		      </picker>
+	      </view>
+        <view class="cu-form-group ">
+		      <view class="title">场地费用</view>
+		      	<view class="picker red">
+			  	    ￥{{price}}
+			        </view>
+	      </view>
+      </view>
+      <view class="cu-bar bg-white justify-end">
+        <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">预约</button>
+
+        </view>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,50 @@
+<!--pages/court_list/court_list.wxml-->
+<view class="yqb_courtList">
+  <!--搜索框 -->
+  <SearchInput></SearchInput>
+</view>
+<!--监听自定义事件-->
+  <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+    <block wx:if="{{tabs[0].isActive}}">
+      <view class="first_tab">
+        <navigator class="court_item" url="../court_detail/court_detail">
+          <!--左侧球场图片容器-->
+          <view class="court_img_wrap">
+            <image mode="widthFix" src="../../images/pic7.jpg"></image>
+          </view>
+          <!--右侧球场信息容器-->
+          <view class="court_info_wrap">
+            <view class="court_name">斯台普斯</view>
+            <view class="court_address">洛杉矶</view>
+            <view class="court_price">¥30起</view>
+          </view>
+        </navigator>
+        <navigator class="court_item">
+          <!--左侧球场图片容器-->
+          <view class="court_img_wrap">
+            <image mode="widthFix" src="../../images/pic7.jpg"></image>
+          </view>
+          <!--右侧球场信息容器-->
+          <view class="court_info_wrap">
+            <view class="court_name">甲骨文</view>
+            <view class="court_address">金州</view>
+            <view class="court_price">¥50起</view>
+          </view>
+        </navigator>
+        <navigator class="court_item">
+          <!--左侧球场图片容器-->
+          <view class="court_img_wrap">
+            <image mode="widthFix" src="../../images/pic7.jpg"></image>
+          </view>
+          <!--右侧球场信息容器-->
+          <view class="court_info_wrap">
+            <view class="court_name">联合中心</view>
+            <view class="court_address">芝加哥</view>
+            <view class="court_price">¥40起</view>
+          </view>
+        </navigator>
+      </view>
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}">1</block>
+    <block wx:elif="{{tabs[2].isActive}}">2</block>
+  </Tabs>

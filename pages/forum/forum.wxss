@@ -1,0 +1,15 @@
+/* pages/forum/forum.wxss */
+.padding-s{
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+}
+.padding-r{
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.xx{
+  border-bottom: 0.1rpx solid #ccc;
+}
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}

@@ -1,0 +1,43 @@
+<view class="yqb_index">
+  <!--搜索框 -->
+  <SearchInput></SearchInput>
+</view>
+
+<!--轮播图-->
+  <view class="index_swiper">
+    <swiper autoplay indicator-dots circular>
+      <swiper-item wx:for="{{imgUrls}}" wx:key="unique">
+        <image src="{{item}}" class="slide-image" mode="scaleToFill"/>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!--球场信息-->
+  <view class="content-box">
+    <view class="header">
+      <text>今日推荐</text>
+      <navigator url="../court_list/court_list">
+        <text class="all">全部球场</text>
+      </navigator>
+    </view>
+    <view class="body" >
+      <view class="body-item single"  wx:for="{{sportsItems}}" wx:for-item="sportsItem" wx:key="unique">
+        <navigator url="../court_detail/court_detail">
+          <image src="{{sportsItem.pic}}" mode="scaleToFill"></image>
+        </navigator>
+        <view class="title">
+          <view class="left">
+            <text>{{sportsItem.title}} </text>
+            <text class="rank">{{sportsItem.rank}}分</text>
+          </view> 
+        </view>
+        <view class="location"><text>地址：{{sportsItem.location}}</text></view>
+        <view class="price">
+          <text class="price">{{sportsItem.price}}</text>
+          <!--<text class="tag" wx:for="{{sportsItem.tags}}" wx:for-item="tag" wx:key="unique">{{tag}}</text>-->
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  

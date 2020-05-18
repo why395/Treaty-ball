@@ -1,0 +1,5 @@
+/* pages/order/order.wxss */
+.test{
+  background-color: darkorange;
+  color: darkorange;
+}

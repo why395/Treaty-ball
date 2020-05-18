@@ -1,0 +1,129 @@
+/* pages/item/item.wxss */
+.container{
+  padding-bottom: 90rpx;
+}
+.pic-gallery{
+  width: 100%;
+  height: 400rpx; 
+  position: relative;
+  text-align: center;
+}
+.pic-gallery image{
+   height: 100%;
+}
+
+
+.court_name_row{
+  display: flex;
+  width: 100%;
+}
+.court_name_row .left{
+  width:70%;
+  display: inline-block;
+}
+.court_name_row .left .court_name{
+  font-size: 32rpx;
+  padding: 5rpx 30rpx;
+  color:#666;
+}
+.court_name_row .left .court_address{
+  font-size: 32rpx;
+  padding: 5rpx 30rpx;
+  color:#666;
+}
+.court_name_row .left .court_price{
+  padding: 5rpx 25rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: red;
+}
+.court_name_row .right{
+  width:30%;
+  display: flex;
+  border-left: 2rpx solid #ccc;
+}
+.court_name_row .right .court_score{
+  width:99%;
+  height: 100%;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+.court_name_row .court_score text{
+  color: red;
+  font-size:1.2rem;
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+
+.remarks{
+  width:100%;
+  background:#fff; 
+  border-top: 2rpx solid #ccc;
+  border-bottom: 2rpx solid #ccc;
+}
+.remarks .header{
+  font-size: 32rpx;
+  font-weight: 600;
+  display: flex;
+  padding: 20rpx 30rpx;
+  position: relative;
+  justify-content: space-between;
+  color:#000;
+  border-bottom: 2rpx solid #ccc;
+}
+
+
+
+.btm_tool{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  display: flex;
+  border-top: 1rpx solid #ccc;
+}
+.btm_tool .tool_item{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 0.1rpx solid #ddd;
+  position: relative;
+}
+.btm_tool .tool_item button{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.btm_tool  .btn_order{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF2222;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.o_title{
+  color:#000;
+  font-weight: 600;
+}
+
+.border{
+  border-top: 1rpx solid #ccc;
+  border-bottom: 1rpx solid #ccc;
+}

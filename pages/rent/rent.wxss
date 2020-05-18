@@ -1,0 +1,17 @@
+/* pages/myRents/myRents.wxss */
+
+.title{
+  padding: 15rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.app_info_wrap {
+  background-color: #fff;
+}
+.app_info_wrap .app_info_item {
+  padding: 15rpx 50rpx;
+}
+.app_info_wrap .app_info_contact {
+  display: flex;
+  justify-content: space-between;
+}
+

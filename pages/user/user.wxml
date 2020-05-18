@@ -1,0 +1,33 @@
+<!--pages/user/user.wxml-->
+<!--个人页面背景头像-->
+<view class="bg-img bg-mask padding-tb-xl" style="background-image: url({{userInfo.avatarUrl}});height: 414rpx;">
+  <view class="padding-xl text-white center">
+   <view class="cu-avatar xl round " style="background-image:url({{userInfo.avatarUrl}});"></view>
+    <view class="padding-xs text-xl text-center">
+      {{userInfo.nickName}}
+    </view>  
+  </view>
+</view>
+
+<!--个人页面应用容器-->
+<view class="user_app_wrap">
+  <view class="user_app">
+    <navigator url="../collect/collect">
+      <view class="user_collect">
+        <view><text>我的收藏</text></view>
+      </view>
+    </navigator>
+
+    
+  </view>
+</view>
+
+<!--个人页面应用信息相关-->
+<view class="app_info_wrap">
+  <view class="app_info_item app_info_contact">
+    <text>联系客服</text>
+    <text>400-666-1001</text>
+  </view>
+  <view class="app_info_item">意见反馈</view>
+  <view class="app_info_item">关于我们</view>
+</view>
