@@ -1,3 +1,6 @@
+var util = require('../../utils/util.js');
+var api = require('../../config/api.js');
+var user = require('../../utils/user.js');
 var app = getApp();
 Page({
     data: {
@@ -52,6 +55,9 @@ Page({
     },
  
     bindGetUserInfo: function(e) {
+        wx.vibrateShort();
+
+        wx.vibrateShort();
         if (e.detail.userInfo) {
             //用户按了允许授权按钮
             var that = this;
@@ -62,9 +68,21 @@ Page({
             that.setData({
                 isHide: false
             });
-            wx.switchTab({
-              url: '../index/index',
-            })
+
+            user.checkLogin().catch(() => {
+
+                user.loginByWeixin(e.detail.userInfo).then(res => {
+                    app.globalData.hasLogin = true;
+                    wx.switchTab({
+                        url: '../index/index',
+                    })
+                }).catch((err) => {
+                    app.globalData.hasLogin = false;
+                    util.showErrorToast('微信登录失败');
+                });
+
+            });
+
         } else {
             //用户按了拒绝按钮
             wx.showModal({
